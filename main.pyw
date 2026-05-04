@@ -24,7 +24,7 @@ CONFIG_FILE = os.path.join(BASE_DIR, "rules.json")
 
 class DownloadHandler(FileSystemEventHandler):
     def __init__(self):
-        self.organizer = FileOrganizer(CONFIG_FILE)
+        self.organizer = FileOrganizer(CONFIG_FILE, WATCH_FOLDER)
 
     def on_created(self, event):
         # Triggered when a new file is created
